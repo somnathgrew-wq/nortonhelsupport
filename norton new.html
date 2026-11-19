@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norton Security – Official Protection Plans</title>
+    <style>
+      #norton-embed-root,
+      #norton-embed-root * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #norton-embed-root {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        width: 100%;
+      }
+
+      #norton-embed-root .topbar {
+        background: #ffcc00;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        letter-spacing: 0.3px;
+      }
+
+      #norton-embed-root .topbar a {
+        color: #c00;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      #norton-embed-root header {
+        background: #1a1a1a;
+        padding: 14px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #norton-embed-root .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #norton-embed-root .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: #ffcc00;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: 900;
+        color: #1a1a1a;
+      }
+
+      #norton-embed-root .logo-text {
+        color: #fff;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+
+      #norton-embed-root .logo-text span {
+        color: #ffcc00;
+      }
+
+      #norton-embed-root .header-phone {
+        color: #ffcc00;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      #norton-embed-root .hero {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 60%, #ffcc00 100%);
+        padding: 60px 40px;
+        text-align: center;
+        color: #fff;
+      }
+
+      #norton-embed-root .hero h1 {
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 1.15;
+        margin-bottom: 12px;
+      }
+
+      #norton-embed-root .hero h1 span {
+        color: #ffcc00;
+      }
+
+      #norton-embed-root .hero p {
+        font-size: 18px;
+        color: #ccc;
+        margin-bottom: 28px;
+      }
+
+      #norton-embed-root .hero-btn {
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        padding: 16px 40px;
+        font-size: 18px;
+        font-weight: 800;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.2s;
+      }
+
+      #norton-embed-root .hero-btn:hover {
+        background: #e6b800;
+      }
+
+      #norton-embed-root .hero-sub {
+        margin-top: 14px;
+        font-size: 13px;
+        color: #aaa;
+      }
+
+      #norton-embed-root .support-banner {
+        background: #ffcc00;
+        padding: 18px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      #norton-embed-root .support-banner .phone-big {
+        font-size: 28px;
+        font-weight: 900;
+        color: #000;
+      }
+
+      #norton-embed-root .support-banner .label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      #norton-embed-root .call-btn {
+        background: #c00;
+        color: #fff;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      #norton-embed-root .section {
+        padding: 50px 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      #norton-embed-root .section-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 8px;
+        color: #1a1a1a;
+      }
+
+      #norton-embed-root .section-sub {
+        text-align: center;
+        font-size: 15px;
+        color: #666;
+        margin-bottom: 36px;
+      }
+
+      #norton-embed-root .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      #norton-embed-root .card {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #norton-embed-root .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+      }
+
+      #norton-embed-root .card-header {
+        background: #ffcc00;
+        padding: 18px 20px 12px;
+        position: relative;
+      }
+
+      #norton-embed-root .card-header.green {
+        background: #2e7d32;
+      }
+
+      #norton-embed-root .card-header.red {
+        background: #c62828;
+      }
+
+      #norton-embed-root .card-header.dark {
+        background: #1a237e;
+      }
+
+      #norton-embed-root .card-badge {
+        background: rgba(255, 255, 255, 0.25);
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      #norton-embed-root .card-header.yellow .card-badge {
+        color: #000;
+      }
+
+      #norton-embed-root .card-logo {
+        font-size: 15px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+
+      #norton-embed-root .card-header.yellow .card-logo {
+        color: #000;
+      }
+
+      #norton-embed-root .card-name {
+        font-size: 26px;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.1;
+      }
+
+      #norton-embed-root .card-header.yellow .card-name {
+        color: #000;
+      }
+
+      #norton-embed-root .card-sub {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 2px;
+      }
+
+      #norton-embed-root .card-header.yellow .card-sub {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      #norton-embed-root .devices-badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: #fff;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 900;
+        color: #000;
+        line-height: 1;
+      }
+
+      #norton-embed-root .devices-badge span {
+        font-size: 8px;
+        font-weight: 600;
+        color: #555;
+      }
+
+      #norton-embed-root .card-body {
+        padding: 18px 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      #norton-embed-root .feature {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: #333;
+      }
+
+      #norton-embed-root .feature .check {
+        color: #2e7d32;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      #norton-embed-root .card-footer {
+        padding: 16px 20px;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      #norton-embed-root .price {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 4px;
+      }
+
+      #norton-embed-root .buy-btn {
+        width: 100%;
+        background: #ffcc00;
+        color: #000;
+        border: none;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 800;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      #norton-embed-root .buy-btn:hover {
+        background: #e6b800;
+      }
+
+      #norton-embed-root .buy-btn.green {
+        background: #2e7d32;
+        color: #fff;
+      }
+
+      #norton-embed-root .buy-btn.green:hover {
+        background: #1b5e20;
+      }
+
+      #norton-embed-root .readmore {
+        font-size: 12px;
+        color: #1a73e8;
+        margin-top: 8px;
+        display: block;
+        cursor: pointer;
+      }
+
+      #norton-embed-root .trust-strip {
+        background: #1a1a1a;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 28px 40px;
+        text-align: center;
+      }
+
+      #norton-embed-root .trust-item {
+        font-size: 13px;
+      }
+
+      #norton-embed-root .trust-item .num {
+        font-size: 26px;
+        font-weight: 900;
+        color: #ffcc00;
+        display: block;
+      }
+
+      #norton-embed-root footer {
+        background: #111;
+        color: #aaa;
+        text-align: center;
+        padding: 24px;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      #norton-embed-root footer a {
+        color: #ffcc00;
+        text-decoration: none;
+      }
+
+      @media (max-width: 600px) {
+        #norton-embed-root .hero h1 {
+          font-size: 28px;
+        }
+
+        #norton-embed-root header {
+          padding: 12px 16px;
+        }
+
+        #norton-embed-root .support-banner {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="norton-embed-root">
+      <div class="topbar">
+        📞 Need Help? Call Norton Support Toll Free:
+        <a href="tel:18334094415">+1(833) 409-4415</a> &nbsp;|&nbsp; 24/7 Customer Service
+      </div>
+
+      <header>
+        <div class="logo">
+          <div class="logo-icon">✓</div>
+          <div class="logo-text"><span>Norton</span> Security</div>
+        </div>
+        <div class="header-phone">📞 +1(833) 409-4415</div>
+      </header>
+
+      <div class="hero">
+        <h1>Complete <span>Digital Protection</span><br />for Every Device</h1>
+        <p>Award-winning antivirus, VPN, Dark Web Monitoring & more — trusted by millions worldwide.</p>
+        <a href="tel:18334094415" class="hero-btn">🛡️ Get Protected Now</a>
+        <p class="hero-sub">30-day money-back guarantee &nbsp;|&nbsp; 100% Virus Protection Promise</p>
+      </div>
+
+      <div class="support-banner">
+        <div>
+          <div class="label">📞 Call Norton Customer Service</div>
+          <div class="phone-big">+1(833) 409-4415</div>
+          <div class="label">Dial Toll Free — Available 24/7</div>
+        </div>
+        <a href="tel:18334094415" class="call-btn">Call Now →</a>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Choose Your Protection Plan</div>
+        <div class="section-sub">All plans include 24/7 support by phone or chat. Cancel anytime.</div>
+
+        <div class="products-grid">
+          <div class="card">
+            <div class="card-header dark">
+              <div class="card-badge">1 YEAR PRE-PAID SUBSCRIPTION</div>
+              <div class="card-logo">✓ norton</div>
+              <div class="card-name">Norton 360<br />Deluxe</div>
+              <div class="card-sub">Continuous protection renews automatically</div>
+              <div class="devices-badge">5<span>DEVICES</span></div>
+            </div>
+            <div class="card-body">
+              <div class="feature"><span class="check">✓</span> Advanced AI Scam Protection</div>
+              <div class="feature"><span class="check">✓</span> Parental Controls</div>
+              <div class="feature"><span class="check">✓</span> Dark Web Monitoring</div>
+              <div class="feature"><span class="check">✓</span> Secure VPN for Online Privacy</div>
+              <div class="feature"><span class="check">✓</span> 50 GB Cloud Backup</div>
+              <div class="feature"><span class="check">✓</span> Password Manager</div>
+            </div>
+            <div class="card-footer">
+              <div class="price">Ongoing Protection — Auto Renews Yearly</div>
+              <button class="buy-btn" onclick="window.location='tel:18334094415'">Buy Now / Call to Order</button>
+              <a class="readmore">Read more →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header green">
+              <div class="card-badge">1 DEVICE · 1 YEAR SUBSCRIPTION</div>
+              <div class="card-logo">✓ norton by Symantec</div>
+              <div class="card-name">Norton Security<br />Standard</div>
+              <div class="card-sub">100% Virus Protection Promise</div>
+              <div class="devices-badge">1<span>DEVICE</span></div>
+            </div>
+            <div class="card-body">
+              <div class="feature"><span class="check">✓</span> Virus, Malware & Ransomware Protection</div>
+              <div class="feature"><span class="check">✓</span> PC, Mac or Mobile Device</div>
+              <div class="feature"><span class="check">✓</span> Free 24/7 Support Phone or Chat</div>
+              <div class="feature"><span class="check">✓</span> Digital Download — Instant Delivery</div>
+              <div class="feature"><span class="check">✓</span> Essential Online Protection</div>
+            </div>
+            <div class="card-footer">
+              <div class="price">Best protection recommended for 1 device</div>
+              <button class="buy-btn green" onclick="window.location='tel:18334094415'">Buy Now / Call to Order</button>
+              <a class="readmore">Essential online protection... Read more →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header red">
+              <div class="card-badge">1 YEAR SUBSCRIPTION</div>
+              <div class="card-logo">✓ norton</div>
+              <div class="card-name">Norton<br />AntiVirus Plus</div>
+              <div class="card-sub">Virus, Malware, Spyware & Ransomware</div>
+              <div class="devices-badge">1<span>DEVICE</span></div>
+            </div>
+            <div class="card-body">
+              <div class="feature"><span class="check">✓</span> Anti-Virus & Anti-Malware</div>
+              <div class="feature"><span class="check">✓</span> 2 GB PC Cloud Backup</div>
+              <div class="feature"><span class="check">✓</span> Smart Firewall for PC</div>
+              <div class="feature"><span class="check">✓</span> 24/7 Support (English only)</div>
+              <div class="feature"><span class="check">✓</span> Digital Download</div>
+              <div class="feature"><span class="check">✓</span> PC & Mac Compatible</div>
+            </div>
+            <div class="card-footer">
+              <div class="price">1 User · 1 Year · Digital Download</div>
+              <button class="buy-btn" onclick="window.location='tel:18334094415'">Buy Now / Call to Order</button>
+              <a class="readmore">1-Includes Anti-virus, Anti-... Read more →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" style="background: #e65100">
+              <div class="card-badge">1 DEVICE · SUBSCRIPTION</div>
+              <div class="card-logo">✓ NortonLifeLock</div>
+              <div class="card-name">Norton 360<br />Standard</div>
+              <div class="card-sub">Powerful layers of protection for your connected world</div>
+              <div class="devices-badge">1<span>DEVICE</span></div>
+            </div>
+            <div class="card-body">
+              <div class="feature"><span class="check">✓</span> Virus & Malware Protection</div>
+              <div class="feature"><span class="check">✓</span> 10 GB PC Cloud Backup</div>
+              <div class="feature"><span class="check">✓</span> Secure VPN</div>
+              <div class="feature"><span class="check">✓</span> Dark Web Monitoring</div>
+              <div class="feature"><span class="check">✓</span> iOS Compatible</div>
+              <div class="feature"><span class="check">✓</span> Subscription Validity: 3 Years</div>
+            </div>
+            <div class="card-footer">
+              <div class="price">1 User · 3 Years Total Coverage</div>
+              <button class="buy-btn" onclick="window.location='tel:18334094415'">Buy Now / Call to Order</button>
+              <a class="readmore">Subscription Validity 3 Yea... Read more →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trust-strip">
+        <div class="trust-item"><span class="num">50M+</span>Users Protected</div>
+        <div class="trust-item"><span class="num">24/7</span>Live Support</div>
+        <div class="trust-item"><span class="num">100%</span>Virus Protection Promise</div>
+        <div class="trust-item"><span class="num">30-Day</span>Money Back Guarantee</div>
+      </div>
+
+      <div class="support-banner" style="background: #1a1a1a">
+        <div>
+          <div class="label" style="color: #aaa">Have questions? Our experts are ready.</div>
+          <div class="phone-big" style="color: #ffcc00">+1(833) 409-4415</div>
+          <div class="label" style="color: #aaa">Toll Free · 24/7 Norton Customer Service</div>
+        </div>
+        <a href="tel:18334094415" class="call-btn">📞 Call Now</a>
+      </div>
+
+      <footer>
+        <p>© 2026 Norton by NortonLifeLock. All rights reserved.</p>
+        <p style="margin-top: 6px">
+          <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a> &nbsp;|&nbsp;
+          <a href="#">Refund Policy</a> &nbsp;|&nbsp; <a href="tel:18334094415">Contact Support</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 11px; color: #555">
+          Norton and the Checkmark Logo are trademarks or registered trademarks of NortonLifeLock Inc. or its affiliates
+          in the United States and other countries.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
